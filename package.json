@@ -1,0 +1,46 @@
+{
+  "name": "js-spec-chai",
+  "version": "0.1.0",
+  "description": "Chai plugin for js.spec",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "tslint": "node_modules/.bin/tslint -t verbose --project tsconfig.json --type-check src/**/*.ts",
+    "publish": "node_modules/.bin/np",
+    "build": "yarn run tslint && tsc",
+    "test": "mocha --opts mocha.opts",
+    "autotest": "nodemon -e 'ts,js,json' -w test/ -w src/ -x 'yarn run test'",
+    "autobuild": "./node_modules/.bin/nodemon -i 'dist/' -e 'ts' -x 'yarn run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arichiardi/js-spec-chai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arichiardi/js-spec-chai/issues"
+  },
+  "homepage": "https://github.com/arichiardi/js-spec-chai#readme",
+  "keywords": [
+    "js.spec",
+    "clojure.spec",
+    "specs"
+  ],
+  "directories": {
+    "lib": "dist"
+  },
+  "author": "Andrea Richiardi Elastic Path Software",
+  "license": "Unlicense",
+  "devDependencies": {
+    "@types/node": "7.0.29",
+    "mocha": "3.4.2",
+    "nodemon": "1.11.0",
+    "np": "2.16.0",
+    "ts-node": "3.0.6",
+    "tslint": "5.4.3",
+    "typescript": "2.3.4"
+  },
+  "dependencies": {
+    "js.spec": "1.0.0-3"
+  }
+}

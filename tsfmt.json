@@ -1,0 +1,8 @@
+{
+  "indentSize": 2,
+  "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "convertTabsToSpaces": true,
+  "placeOpenBraceOnNewLineForFunctions": false
+}
