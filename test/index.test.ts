@@ -25,19 +25,65 @@
  * For more information, please refer to <http://unlicense.org/>
  */
 
-/// <reference path="extensions.ts"/>
-import * as S from "js.spec";
+import * as s from "js.spec"
+import * as chai from "chai";
+import jsSpecChai from "../src/index";
 
-export default function(chai: any, utils: any): void {
+chai.use(jsSpecChai);
+chai.should();
 
-  const Assertion = chai.Assertion;
+describe("js-spec-chai", () => {
 
-  function negativeMsg(spec: Spec, value: object): string {
-    return "" + JSON.stringify(value, null, "\t") + ` conforms to ${spec.name} but it should not`;
-  }
+  context("with nested maps", () => {
+    const school = s.spec.map("schoolSpec", {
+      city: s.string
+    });
+    const friend = s.spec.map("friendSpec", {
+      name: s.string,
+      age: s.number,
+      school
+    });
 
-  Assertion.addMethod("conform", function(spec: Spec) {
-    const obj = this._obj;
-    this.assert(S.valid(spec, obj), S.explainStr(spec, obj), negativeMsg(spec, obj));
+    it("conforms a good object", () => {
+      const obj = {
+        name: "andrea",
+        age: 18,
+        school: {
+          city: "Turin",
+        }
+      };
+      obj.should.conform(friend);
+    })
+
+    it("does not conform is there is a missing key", () => {
+      const obj = {
+        name: "andrea",
+        school: {
+          city: "Turin",
+        }
+      };
+      obj.should.not.conform(friend);
+    });
+
+    // it("does not conform is there is a key with wrong type", () => {
+    //   const obj = {
+    //     name: "andrea",
+    //     age: "18",
+    //     school: {
+    //       city: "Turin",
+    //     }
+    //   };
+    //   obj.should.not.conform(friend);
+    // })
+
+    it("does not conform is there is a nested missing key", () => {
+      const obj = {
+        name: "andrea",
+        age: 18,
+        school: {}
+      };
+      obj.should.not.conform(friend);
+    });
+
   });
-}
+});

@@ -32,7 +32,10 @@
   "author": "Andrea Richiardi Elastic Path Software",
   "license": "Unlicense",
   "devDependencies": {
+    "@types/chai": "4.0.0",
+    "@types/mocha": "2.2.41",
     "@types/node": "7.0.29",
+    "chai": "4.0.2",
     "mocha": "3.4.2",
     "nodemon": "1.11.0",
     "np": "2.16.0",
