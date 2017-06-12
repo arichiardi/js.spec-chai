@@ -1,6 +1,56 @@
 # js-spec-chai
 Chai plugin for js.spec
 
+### Usage
+
+The only addition to `Chai.Assertion` is the `conform` method with accepts the `Spec` object to test against.
+
+Examples can be found in `test/index.test.ts`, but the gist of it is show below:
+
+```
+import * as s from "js.spec"
+import * as chai from "chai";
+import jsSpecChai from "../src/index";
+// fancy chai dancing
+chai.use(jsSpecChai);
+chai.should();
+
+describe("js-spec-chai", () => {
+
+  context("with nested maps", () => {
+    const school = s.spec.map("schoolSpec", {
+      city: s.string
+    });
+    const friend = s.spec.map("friendSpec", {
+      name: s.spec.string,
+      age: s.spec.number,
+      school
+    });
+
+    it("conforms a good object", () => {
+      const obj = {
+        name: "andrea",
+        age: 18,
+        school: {
+          city: "Turin",
+        }
+      };
+      obj.should.conform(friend);
+    })
+
+    it("does not conform is there is a missing key", () => {
+      const obj = {
+        name: "andrea",
+        school: {
+          city: "Turin",
+        }
+      };
+      obj.should.not.conform(friend);
+    });
+  });
+});
+```
+
 #### License
 
 This is free and unencumbered software released into the public domain.
