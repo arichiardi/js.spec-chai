@@ -39,8 +39,8 @@ describe("js-spec-chai", () => {
       city: s.string
     });
     const friend = s.spec.map("friendSpec", {
-      name: s.string,
-      age: s.number,
+      name: s.spec.string,
+      age: s.spec.number,
       school
     });
 
@@ -65,16 +65,16 @@ describe("js-spec-chai", () => {
       obj.should.not.conform(friend);
     });
 
-    // it("does not conform is there is a key with wrong type", () => {
-    //   const obj = {
-    //     name: "andrea",
-    //     age: "18",
-    //     school: {
-    //       city: "Turin",
-    //     }
-    //   };
-    //   obj.should.not.conform(friend);
-    // })
+    it("does not conform is there is a key with wrong type", () => {
+      const obj = {
+        name: "andrea",
+        age: "18",
+        school: {
+          city: "Turin",
+        }
+      };
+      obj.should.not.conform(friend);
+    })
 
     it("does not conform is there is a nested missing key", () => {
       const obj = {
