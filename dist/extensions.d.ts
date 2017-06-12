@@ -27,7 +27,6 @@
 declare namespace Chai {
     interface Assertion {
         conform(spec: object): void;
-        addMethod(name: string, fn: (value: any) => void): void;
     }
 }
 declare class Spec {
