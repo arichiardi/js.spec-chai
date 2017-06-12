@@ -3,9 +3,9 @@ Chai plugin for js.spec
 
 ### Usage
 
-The only addition to `Chai.Assertion` is the `conform` method with accepts the `Spec` object to test against.
+The only addition to `Chai.Assertion` is the `conform` method which accepts the `Spec` object to test against.
 
-Examples can be found in `test/index.test.ts`, but the gist of it is show below:
+Examples can be found in the `test` folder, but the gist of it is shown below:
 
 ```
 import * as s from "js.spec"
