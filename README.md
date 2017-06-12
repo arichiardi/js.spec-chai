@@ -7,7 +7,7 @@ The only addition to `Chai.Assertion` is the `conform` method which accepts the 
 
 Examples can be found in the `test` folder, but the gist of it is shown below:
 
-```
+```typescript
 import * as s from "js.spec"
 import * as chai from "chai";
 import jsSpecChai from "../src/index";
