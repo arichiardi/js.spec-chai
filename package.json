@@ -44,6 +44,6 @@
     "typescript": "2.3.4"
   },
   "dependencies": {
-    "js.spec": "1.0.0-3"
+    "js.spec": "1.0.0-7"
   }
 }

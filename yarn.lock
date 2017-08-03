@@ -1033,9 +1033,9 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js.spec@1.0.0-3:
-  version "1.0.0-3"
-  resolved "https://registry.yarnpkg.com/js.spec/-/js.spec-1.0.0-3.tgz#762086df6012998438fa11fcf0a519f08bfe5cb4"
+js.spec@1.0.0-7:
+  version "1.0.0-7"
+  resolved "https://registry.yarnpkg.com/js.spec/-/js.spec-1.0.0-7.tgz#cc521f2629fbbf803c54f0475a557aea103da868"
   dependencies:
     lodash.chunk "^4.2.0"
     lodash.flattendeep "^4.4.0"
