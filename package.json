@@ -1,5 +1,5 @@
 {
-  "name": "js-spec-chai",
+  "name": "js.spec-chai",
   "version": "0.1.2-1",
   "description": "Chai plugin for js.spec",
   "main": "dist/index.js",
@@ -14,16 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arichiardi/js-spec-chai.git"
+    "url": "git+https://github.com/arichiardi/js.spec-chai.git"
   },
   "bugs": {
-    "url": "https://github.com/arichiardi/js-spec-chai/issues"
+    "url": "https://github.com/arichiardi/js.spec-chai/issues"
   },
-  "homepage": "https://github.com/arichiardi/js-spec-chai#readme",
+  "homepage": "https://github.com/arichiardi/js.spec-chai#readme",
   "keywords": [
     "js.spec",
     "clojure.spec",
-    "specs"
+    "specs",
+    "chai",
+    "chai-plugin"
   ],
   "directories": {
     "lib": "dist"

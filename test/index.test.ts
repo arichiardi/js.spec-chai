@@ -32,7 +32,7 @@ import jsSpecChai from "../src/index";
 chai.use(jsSpecChai);
 chai.should();
 
-describe("js-spec-chai", () => {
+describe("Spec tests", () => {
 
   context("with nested maps", () => {
     const school = s.spec.map("schoolSpec", {

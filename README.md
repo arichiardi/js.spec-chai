@@ -1,5 +1,8 @@
-# js-spec-chai
+# js.spec-chai
+
 Chai plugin for js.spec
+
+* It used to be named `js-spec-chai`, see [#2](https://github.com/arichiardi/js.spec-chai/issues/2) *
 
 ### Usage
 
@@ -15,7 +18,7 @@ import jsSpecChai from "../src/index";
 chai.use(jsSpecChai);
 chai.should();
 
-describe("js-spec-chai", () => {
+describe("Spec tests", () => {
 
   context("with nested maps", () => {
     const school = s.spec.map("schoolSpec", {
