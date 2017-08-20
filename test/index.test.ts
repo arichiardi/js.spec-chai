@@ -36,7 +36,7 @@ describe("js-spec-chai", () => {
 
   context("with nested maps", () => {
     const school = s.spec.map("schoolSpec", {
-      city: s.string
+      city: s.spec.string
     });
     const friend = s.spec.map("friendSpec", {
       name: s.spec.string,
