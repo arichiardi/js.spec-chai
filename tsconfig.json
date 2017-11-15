@@ -4,6 +4,7 @@
     "noImplicitAny": false,
     "removeComments": false,
     "outDir": "dist",
+    "declaration": true,
     "preserveConstEnums": true,
     "declaration": true,
     "pretty": true,
@@ -13,6 +14,10 @@
       "es6"
     ]
   },
+  "types" : [
+    "chai",
+    "js.spec"
+  ],
   "include": [
     "src/**/*"
   ]

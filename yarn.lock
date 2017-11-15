@@ -6,6 +6,10 @@
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.3.tgz#6c2264b195cd2bb4c95c108487e13df0c8567c3e"
 
+"@types/js.spec@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/js.spec/-/js.spec-1.0.1.tgz#8cc10ea283864c747b1bc76d7675d7c95b266b90"
+
 "@types/mocha@2.2.41":
   version "2.2.41"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.41.tgz#e27cf0817153eb9f2713b2d3f6c68f1e1c3ca608"

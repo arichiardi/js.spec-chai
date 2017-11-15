@@ -25,8 +25,11 @@
  * For more information, please refer to <http://unlicense.org/>
  */
 
-import * as s from "js.spec"
+/// <reference types="js.spec" />
+
 import * as chai from "chai";
+import * as S from "js.spec"
+
 import jsSpecChai from "../src/index";
 
 chai.use(jsSpecChai);
@@ -35,12 +38,12 @@ chai.should();
 describe("Spec tests", () => {
 
   context("with nested maps", () => {
-    const school = s.spec.map("schoolSpec", {
-      city: s.spec.string
+    const school = S.spec.map("schoolSpec", {
+      city: S.spec.string
     });
-    const friend = s.spec.map("friendSpec", {
-      name: s.spec.string,
-      age: s.spec.number,
+    const friend = S.spec.map("friendSpec", {
+      name: S.spec.string,
+      age: S.spec.number,
       school
     });
 

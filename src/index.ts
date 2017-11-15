@@ -25,18 +25,32 @@
  * For more information, please refer to <http://unlicense.org/>
  */
 
-/// <reference path="extensions.ts"/>
+/// <reference types="chai" />
+/// <reference types="js.spec" />
+
 import * as S from "js.spec";
+
+// Needs declare or it won't work!
+// https://stackoverflow.com/a/46755166/1888507
+declare global {
+  export namespace Chai {
+    export interface Assertion {
+      conform(spec: S.Spec): void;
+      // Added for extension
+      addMethod(name: string, fn: (param: any) => void);
+    }
+  }
+}
 
 export default function(chai: any, utils: any): void {
 
-  const Assertion = chai.Assertion;
+  const Assertion: Chai.Assertion = chai.Assertion;
 
-  function negativeMsg(spec: Spec, value: object): string {
+  function negativeMsg(spec: S.Spec, value: object): string {
     return "" + JSON.stringify(value, null, "\t") + ` conforms to ${spec.name} but it should not`;
   }
 
-  Assertion.addMethod("conform", function(spec: Spec) {
+  Assertion.addMethod("conform", function(spec: S.Spec) {
     const obj = this._obj;
     this.assert(S.valid(spec, obj), S.explainStr(spec, obj), negativeMsg(spec, obj));
   });
