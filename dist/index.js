@@ -26,7 +26,8 @@
  * For more information, please refer to <http://unlicense.org/>
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-/// <reference path="extensions.ts"/>
+/// <reference types="chai" />
+/// <reference types="js.spec" />
 const S = require("js.spec");
 function default_1(chai, utils) {
     const Assertion = chai.Assertion;
