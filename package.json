@@ -46,6 +46,6 @@
     "typescript": "2.4.2"
   },
   "peerDependencies": {
-    "js.spec": ">= 1.0.0 < 2"
+    "js.spec": ">=1.0.0 <2"
   }
 }
