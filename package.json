@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
-    "tslint": "node_modules/.bin/tslint -t verbose --project tsconfig.json --type-check src/**/*.ts",
-    "build": "yarn run tslint && tsc",
+    "tslint": "node_modules/.bin/tslint -t verbose --project tsconfig.json",
+    "build": "yarn tslint && tsc",
     "test": "mocha --opts mocha.opts",
     "test:auto": "./node_modules/.bin/nodemon -e 'ts,js,json' -w test/ -w src/ -x 'yarn run test'",
     "build:auto": "./node_modules/.bin/nodemon -i 'dist/' -e 'ts' -x 'yarn run build'"
