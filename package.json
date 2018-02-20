@@ -33,18 +33,18 @@
   "author": "Andrea Richiardi Elastic Path Software",
   "license": "Unlicense",
   "devDependencies": {
-    "@types/chai": "4.0.3",
+    "@types/chai": "4.1.2",
     "@types/js.spec": "1.0.1",
-    "@types/mocha": "2.2.41",
-    "@types/node": "8.0.24",
-    "chai": "4.1.1",
-    "js.spec": "1.0.0-14",
-    "mocha": "3.5.0",
-    "nodemon": "1.11.0",
+    "@types/mocha": "2.2.48",
+    "@types/node": "9.4.6",
+    "chai": "4.1.2",
+    "js.spec": "1.0.0-23",
+    "mocha": "5.0.1",
+    "nodemon": "1.15.1",
     "np": "2.16.0",
-    "ts-node": "3.3.0",
-    "tslint": "5.8.0",
-    "typescript": "2.6.1"
+    "ts-node": "5.0.0",
+    "tslint": "5.9.1",
+    "typescript": "2.7.2"
   },
   "peerDependencies": {
     "js.spec": ">1.0.0-14"
